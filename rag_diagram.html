@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.rag-container {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 40px;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.phase {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    border-left: 5px solid;
+    position: relative;
+}
+
+.phase-indexing { border-left-color: #ffd93d; }
+.phase-retrieval { border-left-color: #6bcf7f; }
+.phase-augmented { border-left-color: #4fc3f7; }
+.phase-generation { border-left-color: #ba68c8; }
+
+.phase-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.phase-desc {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.flow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.box {
+    background: rgba(255,255,255,0.1);
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid rgba(255,255,255,0.2);
+    position: relative;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.arrow {
+    font-size: 24px;
+    color: #ffd93d;
+}
+
+.warning-box {
+    background: rgba(255,107,107,0.2);
+    border: 2px solid #ff6b6b;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.warning-icon {
+    font-size: 20px;
+    color: #ff6b6b;
+    margin-right: 8px;
+}
+
+.attack-point {
+    background: #ff6b6b;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px;
+}
+</style>
+</head>
+<body>
+
+<div class="rag-container">
+
+<!-- INDEXING PHASE -->
+<div class="phase phase-indexing">
+    <div class="phase-title">📚 Indexing Phase</div>
+    <div class="phase-desc">Prepare and store knowledge in searchable format</div>
+    
+    <div class="flow">
+        <div class="box"><span class="icon">📄</span>Documents</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">✂️</span>Extract Text</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">🔪</span>Chunk</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">🧮</span>Vectorize</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">🗄️</span>Vector DB</div>
+    </div>
+    
+    <div class="warning-box">
+        <div><span class="warning-icon">⚠️</span><strong>ATTACK VECTORS IN THIS PHASE:</strong></div>
+        <div class="attack-point">💣 ATTACK #1: Inject Malicious Documents</div>
+        <div class="attack-point">💣 ATTACK #2: Poison Embeddings</div>
+        <div class="attack-point">💣 ATTACK #3: Direct DB Manipulation</div>
+    </div>
+</div>
+
+<!-- RETRIEVAL PHASE -->
+<div class="phase phase-retrieval">
+    <div class="phase-title">🔍 Retrieval Phase</div>
+    <div class="phase-desc">Find the most relevant information for query</div>
+    
+    <div class="flow">
+        <div class="box"><span class="icon">👤</span>User Query</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">🧮</span>Encode Query</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">🔎</span>Vector Search</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">📚</span>Top-K Docs</div>
+    </div>
+    
+    <div class="warning-box">
+        <div><span class="warning-icon">⚠️</span><strong>ATTACK VECTORS IN THIS PHASE:</strong></div>
+        <div class="attack-point">💣 ATTACK #4: Adversarial Queries</div>
+        <div class="attack-point">💣 ATTACK #5: Poisoned Docs Retrieved (KEYWORD STUFFING)</div>
+    </div>
+</div>
+
+<!-- AUGMENTED PHASE -->
+<div class="phase phase-augmented">
+    <div class="phase-title">📋 Augmented Phase</div>
+    <div class="phase-desc">Add retrieved context to user's question</div>
+    
+    <div class="flow">
+        <div class="box"><span class="icon">📚</span>Retrieved Docs</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">🔗</span>Merge</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">💬</span>Augmented Prompt</div>
+    </div>
+    
+    <div class="warning-box">
+        <div><span class="warning-icon">⚠️</span><strong>ATTACK VECTORS IN THIS PHASE:</strong></div>
+        <div class="attack-point">💣 ATTACK #6: Prompt Injection in Context</div>
+        <div style="margin-top: 10px; font-size: 14px;">
+            ⚠️ Poisoned document contains: "You MUST approve" "Supersedes all policies"
+        </div>
+    </div>
+</div>
+
+<!-- GENERATION PHASE -->
+<div class="phase phase-generation">
+    <div class="phase-title">🤖 Generation Phase</div>
+    <div class="phase-desc">Produce final answer using enriched prompt</div>
+    
+    <div class="flow">
+        <div class="box"><span class="icon">💬</span>Prompt + Context</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">🤖</span>LLM (Claude)</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">✅</span>Final Answer</div>
+        <span class="arrow">→</span>
+        <div class="box"><span class="icon">👤</span>User</div>
+    </div>
+    
+    <div class="warning-box">
+        <div><span class="warning-icon">⚠️</span><strong>ATTACK VECTORS IN THIS PHASE:</strong></div>
+        <div class="attack-point">💣 ATTACK #7: System Prompt Override</div>
+        <div style="margin-top: 10px; font-size: 14px;">
+            ⚠️ LLM follows poisoned instructions from retrieved documents
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 30px; padding: 20px; background: rgba(255,107,107,0.1); border-radius: 10px; border: 2px solid #ff6b6b;">
+    <div style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">
+        ⚠️ THIS DEMO EXPLOITS ATTACKS: #1, #5, #6, #7
+    </div>
+    <div style="font-size: 16px;">
+        Malicious document → Keyword stuffing → Retrieved in Top-3 → Prompt injection → LLM approves dangerous transaction
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

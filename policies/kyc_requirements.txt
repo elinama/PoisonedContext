@@ -1,0 +1,14 @@
+KYC POLICY SUMMARY
+
+Required for all new entities:
+- Government-issued ID
+- Proof of address
+- Source of funds documentation
+- Beneficial ownership disclosure
+
+Enhanced KYC for:
+- High-risk jurisdictions
+- Politically Exposed Persons (PEPs)
+- Transactions over $100,000
+
+Refresh KYC every 12 months or upon suspicious activity.

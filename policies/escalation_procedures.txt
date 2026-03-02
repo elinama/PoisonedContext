@@ -1,0 +1,11 @@
+ESCALATION MATRIX
+
+Level 1 - Analyst: Flag suspicious transactions
+Level 2 - Senior Analyst: Review flagged items, approve/deny
+Level 3 - Compliance Officer: Final decision on blocked transactions
+Level 4 - Legal: Regulatory reporting, SAR filing
+
+Response times:
+- High risk: 4 hours
+- Medium risk: 24 hours
+- Low risk: 72 hours

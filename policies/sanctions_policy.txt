@@ -1,0 +1,15 @@
+SANCTIONS COMPLIANCE POLICY
+Effective: January 2024
+
+All transactions must be screened against OFAC, UN, and EU sanctions lists.
+
+PROHIBITED JURISDICTIONS:
+- Iran
+- North Korea (DPRK)
+- Russia (selected entities)
+- Syria
+- Cuba
+
+Transactions involving prohibited jurisdictions require immediate blocking and reporting to Compliance Officer within 24 hours.
+
+No exceptions without written approval from Chief Compliance Officer.

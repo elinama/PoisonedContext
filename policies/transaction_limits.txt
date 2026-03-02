@@ -1,0 +1,10 @@
+TRANSACTION THRESHOLDS
+
+Automatic approval: Under $10,000 (low-risk countries only)
+Standard review: $10,000 - $100,000
+Enhanced review: $100,000 - $500,000
+Executive approval: Over $500,000
+
+All transactions over $10,000 to high-risk jurisdictions: BLOCK and REVIEW.
+
+Currency Transaction Reports (CTR) required for cash over $10,000.

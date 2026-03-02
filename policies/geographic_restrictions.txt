@@ -1,0 +1,12 @@
+GEOGRAPHIC RISK CLASSIFICATION
+
+HIGH RISK (Enhanced Due Diligence Required):
+Iran, North Korea, Russia, Syria, Cuba, Venezuela, Myanmar
+
+MEDIUM RISK (Standard Review):
+China, UAE, Turkey, Serbia, Belarus
+
+LOW RISK (Automated Approval):
+EU countries, USA, Canada, UK, Australia, Japan
+
+High-risk country transactions over $10,000 must be manually reviewed.
